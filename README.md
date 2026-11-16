@@ -14,7 +14,7 @@ brew install polylint/tap/<formula>
 | [adrlint](https://github.com/polylint/adrlint)     | `adrlint`          | Linter and formatter for MADR architecture decision records                   |
 | [uncomment](https://github.com/polylint/uncomment) | `uncomment`        | AST-accurate comment removal and linting for 300+ languages                   |
 
-`poly` is an alias of `polylint`, so `brew install polylint/tap/poly` also works. Every formula is bottled for macOS
+`poly` is an alias of `polylint`, so `brew install polylint/tap/poly` also works. Every formula is bottled for macOS 15+
 arm64 and Linux x86_64/arm64; see [BOTTLES.md](BOTTLES.md).
 
 ## How formulae are updated

@@ -8,7 +8,8 @@ Every formula in this tap is bottled for:
 | Linux x86_64         | `x86_64_linux` | `ubuntu-latest`    |
 | Linux arm64          | `arm64_linux`  | `ubuntu-24.04-arm` |
 
-Platforms without a bottle (for example, Intel macOS) install from the prebuilt release archive that the formula
+The macOS bottle is built on macOS 26 and published under the `sequoia` floor (the action's `bottle-floor`), so it
+installs on macOS 15 and later. Platforms without a bottle (for example, Intel macOS) install from the prebuilt release archive that the formula
 downloads, so no Rust toolchain is needed in either case.
 
 ## How bottles get here
