@@ -9,6 +9,13 @@ class Adrlint < Formula
   version "0.5.2"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/polylint/adrlint/releases/download/v0.5.2"
+    sha256 cellar: :any_skip_relocation, arm64_linux: "9f452637705623c3ad4e13d30b1cee5d8c137a5c5ab054562d6680dcaecd191d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "de015feed60299065568641443907f409fc8340d1589997a6e7c2cfb0d98ff59"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "819dccf0477bddf6198a75285f84e5d7b9c8a58c3e455a2b9607703fb4b4c77b"
+  end
+
   on_macos do
     on_arm do
       url "https://github.com/polylint/adrlint/releases/download/v#{version}/adrlint-aarch64-apple-darwin.tar.gz"
