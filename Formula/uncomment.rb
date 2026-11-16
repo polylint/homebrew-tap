@@ -7,6 +7,13 @@ class Uncomment < Formula
   version "3.12.0"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/polylint/uncomment/releases/download/v3.12.0"
+    sha256 cellar: :any_skip_relocation, arm64_linux: "8bc3a608d3e1e024cee403be481d3f063ba3bd858ed2b3cb300c8789008b2a03"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a17bf1e47b4f2b93a5aaec9f3dd51da2d470198ad977fece1cbb96262cbffc07"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "e3d3c6fb423dcfd9b0ed93bb0bba12d9957b4de2511e212da350e13822e3faac"
+  end
+
   on_macos do
     on_arm do
       url "https://github.com/polylint/uncomment/releases/download/v#{version}/uncomment-aarch64-apple-darwin.tar.gz"
