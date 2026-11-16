@@ -6,37 +6,30 @@
 class Adrlint < Formula
   desc "Lint and format MADR architecture decision records"
   homepage "https://github.com/polylint/adrlint"
-  version "0.5.1"
+  version "0.5.2"
   license "MIT"
-
-  bottle do
-    root_url "https://github.com/polylint/adrlint/releases/download/v0.5.1"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "0b547343787f1ae1235ecbbbde06ad2fdfd6d6d3e8d8cb63ee706142c31cf506"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "95e9e660f48957075037a2cb7d082123464c396fb1b30b54ef9a9cb82662bf3b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "f52cdbf1e3825af3fa86a71c33579589bc61e70ebc7bd74c2b0314f408f52f7d"
-  end
 
   on_macos do
     on_arm do
       url "https://github.com/polylint/adrlint/releases/download/v#{version}/adrlint-aarch64-apple-darwin.tar.gz"
-      sha256 "062a4f6f35dc8bda147e36f3825b2049fc758f49ab688ccb5671bce063dae241"
+      sha256 "7e60c3cee2da5b41347ff94a43c4c97ec3327043005d7a84fcfdfe2da17a26a8"
     end
 
     on_intel do
       url "https://github.com/polylint/adrlint/releases/download/v#{version}/adrlint-x86_64-apple-darwin.tar.gz"
-      sha256 "7b522caa8cd96f419c98f099244ad01db6158f772591ca8020522b75c13163e3"
+      sha256 "9c3b2fbf146a3b8109124c2fda22c556804b7ae34fed48539e6a3912c5501edb"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/polylint/adrlint/releases/download/v#{version}/adrlint-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "eaabc04c46d811e7d59db98f651a5b350ea707f8975ba067f4c1ebc513b15b7e"
+      sha256 "599aa4b4e15e8ce2e47caf216d498ee8cf1543f4c20f57121fd17989ca6feab9"
     end
 
     on_intel do
       url "https://github.com/polylint/adrlint/releases/download/v#{version}/adrlint-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "18ed5775e0a45ae3be20d108ce82bb0309be8e340e5faddbf195ec4a9d0ca0f8"
+      sha256 "510699c777864e4dc33e9f4311a339432788033e8804869ba1b5493d570dd9d9"
     end
   end
 
