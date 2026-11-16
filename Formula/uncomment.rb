@@ -4,37 +4,30 @@
 class Uncomment < Formula
   desc "Fast, AST-accurate comment removal and tag-comment linting built on tree-sitter"
   homepage "https://github.com/polylint/uncomment"
-  version "3.12.0"
+  version "3.12.1"
   license "MIT"
-
-  bottle do
-    root_url "https://github.com/polylint/uncomment/releases/download/v3.12.0"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "8bc3a608d3e1e024cee403be481d3f063ba3bd858ed2b3cb300c8789008b2a03"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a17bf1e47b4f2b93a5aaec9f3dd51da2d470198ad977fece1cbb96262cbffc07"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "e3d3c6fb423dcfd9b0ed93bb0bba12d9957b4de2511e212da350e13822e3faac"
-  end
 
   on_macos do
     on_arm do
       url "https://github.com/polylint/uncomment/releases/download/v#{version}/uncomment-aarch64-apple-darwin.tar.gz"
-      sha256 "9c22db7881b5a2dae6442ec32eb49e71cb6d07a8317a09126608e992d1c3aa6b"
+      sha256 "568d148a70b9ce30333435ffc06a64bf79e7c529f913f00cb6afb60f7b2d5961"
     end
 
     on_intel do
       url "https://github.com/polylint/uncomment/releases/download/v#{version}/uncomment-x86_64-apple-darwin.tar.gz"
-      sha256 "287b5bf1451fbf02e84d9b5b362037dcde7c8e0389a5b4baa51a88743042633e"
+      sha256 "9866f45701bbd19e0983fc5538ef16fc9115d8044c402258619852f8c95f73e0"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/polylint/uncomment/releases/download/v#{version}/uncomment-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "bd0697c8a6e076596f8f7a479aa933fde0b936d16eef2f441c0c2a5e8a4ef5d7"
+      sha256 "cbb5b32d4f0f5ec3a5a50ffdfc735003023132be19f5163c27ead679ac08f7cf"
     end
 
     on_intel do
       url "https://github.com/polylint/uncomment/releases/download/v#{version}/uncomment-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "c667d4579eeb14a5b520e46b707c93935549a1c4ba8bf9b2fb58d95753a0040c"
+      sha256 "67e89fcd7dd31273d8910944a0532ebb8b2aaa13cf7169849a39db862697e8b9"
     end
   end
 
