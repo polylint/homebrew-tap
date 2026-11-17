@@ -8,6 +8,13 @@ class Skif < Formula
   version "0.9.0"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/polylint/skif/releases/download/v0.9.0"
+    sha256 cellar: :any_skip_relocation, arm64_linux: "c5d02832bed48fe2521d15ef35fec11694eab9cabe9117e2ce9dd6a77df0f56e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d3a18a6261053e11e42a0f0bba5ff825d2bbcf7d7b5e3ebc54d8e26f105eeea0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "329e8b721d88a99488386205936eec8f6bee693eb241c331d428eafdd9b1e0b0"
+  end
+
   on_macos do
     on_arm do
       url "https://github.com/polylint/skif/releases/download/v0.9.0/skif-aarch64-apple-darwin.tar.gz"
