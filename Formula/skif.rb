@@ -5,25 +5,18 @@
 class Skif < Formula
   desc "Fast dependency linter for JavaScript and TypeScript monorepos"
   homepage "https://github.com/polylint/skif"
-  version "0.9.1"
+  version "0.9.2"
   license "MIT"
-
-  bottle do
-    root_url "https://github.com/polylint/skif/releases/download/v0.9.1"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "f9303a466e46545550e2c323bc3e1ab7ef3e86f8c6fb9923c7019d9e9a1c8096"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "651944acf5d8493b9c0c25593de3629010bcc2d551f4526e695080beb4bba9b8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "9f122b60e60c0ce3f833a7b87acce2f9a4d60d8b507288afd114f24893802cdf"
-  end
 
   on_macos do
     on_arm do
-      url "https://github.com/polylint/skif/releases/download/v0.9.1/skif-aarch64-apple-darwin.tar.gz"
-      sha256 "44cbcb92a309173a771c31f383939af058f43e9fe890531a8f0663d694f37f8f"
+      url "https://github.com/polylint/skif/releases/download/v0.9.2/skif-aarch64-apple-darwin.tar.gz"
+      sha256 "1eaa0f219200299e2e662492f7af523975f451a849fbc147bb78e3d8b9299502"
     end
 
     on_intel do
-      url "https://github.com/polylint/skif/releases/download/v0.9.1/skif-x86_64-apple-darwin.tar.gz"
-      sha256 "3478c8e8439646cfb1bda8225ab90c48499135cecd6b9711ee3e29b45e31e780"
+      url "https://github.com/polylint/skif/releases/download/v0.9.2/skif-x86_64-apple-darwin.tar.gz"
+      sha256 "a6627787882eb7f09c8eb9f701ec0ce61246082774d5ed4428a37b214de6bd22"
     end
   end
 
@@ -33,21 +26,21 @@ class Skif < Formula
     glibc_ok = OS.linux? && OS::Linux::Glibc.system_version >= Version.new("2.34")
     on_arm do
       if glibc_ok
-        url "https://github.com/polylint/skif/releases/download/v0.9.1/skif-aarch64-unknown-linux-gnu.tar.gz"
-        sha256 "6c822cdc0ae5520775febd13eecf7077816d6eab2f5fa42210c79e72abe6c12b"
+        url "https://github.com/polylint/skif/releases/download/v0.9.2/skif-aarch64-unknown-linux-gnu.tar.gz"
+        sha256 "0d3bac7d8a1b82cd78b0071904975874c1d4a586be56ac58a51c90608f403229"
       else
-        url "https://github.com/polylint/skif/releases/download/v0.9.1/skif-aarch64-unknown-linux-musl.tar.gz"
-        sha256 "472a5d53d9f7f525e6660f5463c7056b77da38ecdd62698601813045e3c990f1"
+        url "https://github.com/polylint/skif/releases/download/v0.9.2/skif-aarch64-unknown-linux-musl.tar.gz"
+        sha256 "a555e5e02f4322d50ce2d1932037c95eea6f18d4701b031fcf3ebff32ba5dd23"
       end
     end
 
     on_intel do
       if glibc_ok
-        url "https://github.com/polylint/skif/releases/download/v0.9.1/skif-x86_64-unknown-linux-gnu.tar.gz"
-        sha256 "2321c3594a9c3f0fca6e04015f52fd73b8a5d94a2fc7b29f45c7fa96ba592992"
+        url "https://github.com/polylint/skif/releases/download/v0.9.2/skif-x86_64-unknown-linux-gnu.tar.gz"
+        sha256 "5c9ddeeda4b6bb530163f79ba1b01d9a2dbcb6ed5a012a73666e1aea8646df87"
       else
-        url "https://github.com/polylint/skif/releases/download/v0.9.1/skif-x86_64-unknown-linux-musl.tar.gz"
-        sha256 "2bc944d76c9c39ff2218195b11c49b3781b0d0ae989c12bb58e8ba7ed2c6365c"
+        url "https://github.com/polylint/skif/releases/download/v0.9.2/skif-x86_64-unknown-linux-musl.tar.gz"
+        sha256 "4fcbdb6f6496d852181ab93670373d39fdf783d7174f90531bc14c40c38ecc1d"
       end
     end
   end
