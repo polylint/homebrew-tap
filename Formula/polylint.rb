@@ -5,21 +5,14 @@
 class Polylint < Formula
   desc "Universal polyglot linter and formatter"
   homepage "https://github.com/polylint/polylint"
-  version "0.36.0"
+  version "0.36.1"
   license "MIT"
-
-  bottle do
-    root_url "https://github.com/polylint/polylint/releases/download/v0.36.0"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "37feebb543aa81f54762735ca443c7653a70fee400ea80352e3c176eef7e2bd2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "855d1aee2eb19a0106e5515feff52df454cdfe91120ea16482a6b3b265f58bff"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "b8bba0859e3cd9e2d49809cee37775f2db3ca3d1f854cbc1a74501f4df7eacf4"
-  end
 
   # Homebrew validates the stable URL even on platforms excluded by requirements, so the macOS
   # archive stays at class scope. Intel macOS is not shipped (ADR 0046): `depends_on arch: :arm64`
   # refuses it with an accurate message. Check with `brew readall --os=all --arch=all polylint/tap`.
-  url "https://github.com/polylint/polylint/releases/download/v0.36.0/poly-0.36.0-aarch64-apple-darwin.tar.gz"
-  sha256 "18e1f15581740ab8d810813282b13b47d95f900eb08692826c37f4f895499f76"
+  url "https://github.com/polylint/polylint/releases/download/v0.36.1/poly-0.36.1-aarch64-apple-darwin.tar.gz"
+  sha256 "f79ef96f69ca3c3a9e0f9c1543d5278ec138648fda6032e19c5d5ebeb5b8f757"
 
   on_macos do
     depends_on arch: :arm64
@@ -27,13 +20,13 @@ class Polylint < Formula
 
   on_linux do
     on_arm do
-      url "https://github.com/polylint/polylint/releases/download/v0.36.0/poly-0.36.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "b42d27a4bc4968f4a11c9c00715f332b474b5e64828e88ac7ba0f5804d8c6f46"
+      url "https://github.com/polylint/polylint/releases/download/v0.36.1/poly-0.36.1-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "8b46f5aa309f4b8806c325931ed8d4ecc5fb34caf12f7107ab7726727fef4006"
     end
 
     on_intel do
-      url "https://github.com/polylint/polylint/releases/download/v0.36.0/poly-0.36.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "3db2f43ee4b545da45fb427ce57554592b043a70dc9fb991ae7e6f762cedbde3"
+      url "https://github.com/polylint/polylint/releases/download/v0.36.1/poly-0.36.1-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "f473e2db1d1a26587d92a87e27114bddda914aa7d2c281f00fec93ebe2f0d0ad"
     end
   end
 
