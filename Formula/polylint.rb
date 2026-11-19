@@ -8,6 +8,13 @@ class Polylint < Formula
   version "0.36.0"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/polylint/polylint/releases/download/v0.36.0"
+    sha256 cellar: :any_skip_relocation, arm64_linux: "37feebb543aa81f54762735ca443c7653a70fee400ea80352e3c176eef7e2bd2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "855d1aee2eb19a0106e5515feff52df454cdfe91120ea16482a6b3b265f58bff"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "b8bba0859e3cd9e2d49809cee37775f2db3ca3d1f854cbc1a74501f4df7eacf4"
+  end
+
   # Homebrew validates the stable URL even on platforms excluded by requirements, so the macOS
   # archive stays at class scope. Intel macOS is not shipped (ADR 0046): `depends_on arch: :arm64`
   # refuses it with an accurate message. Check with `brew readall --os=all --arch=all polylint/tap`.
